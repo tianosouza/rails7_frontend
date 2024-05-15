@@ -65,6 +65,7 @@ RUN --mount=type=cache,target=/var/cache/apt,sharing=locked \
     echo "deb https://deb.nodesource.com/node_18.x $(lsb_release -cs) main" | tee /etc/apt/sources.list.d/nodesource.list && \
     apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get install -yq --no-install-recommends nodejs
+
 RUN npm install -g yarn@latest
 # [Optional] Uncomment this line to install additional gems.
 # RUN su vscode -c "gem install <your-gem-names-here>"
